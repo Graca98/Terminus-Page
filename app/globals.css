@@ -2,7 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/*? Custom tailwind classy */
+@layer components {
+  .img-hover {
+    @apply transition ease-in-out duration-300 hover:scale-105;
+  }
+  /* .container-fluid {
+    @apply max-w-screen-2xl mx-auto p-6 md:p-16;
+  } */
+  .myBackground {
+    @apply text-gray-900 flex flex-col;
+  }
+  .container-navbar {
+    @apply shadow-none mx-auto max-w-screen-xl w-full px-4;
+  }
+  .container-default {
+    @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow;
+  }
+  .bg-termi {
+    background-color: #212529;
+  }
+  .bg-termi-hover {
+    background-color: #3f454b;
+  }
+}
+
 :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/*? Default nastavení */
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,20 +46,79 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: var(--foreground-rgb);
+  color: white; */
+
+  background-position: center top;
+  background-image: url(./img/background.png);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* font-family: Calibri; */
+  /* font-size: 18px; */
+
+  /* height: 100vh; */
 }
 
-@layer utilities {
+.myBackground {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(240, 255, 255, 0.3) 140%
+  );
+  flex: 1;
+  min-height: calc(100vh - 160px);
+}
+
+.gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(240, 255, 255, 0.4) 140%
+  );
+}
+
+/* -60px šírka modalu na mobilní nav */
+/* .nav-h {
+  top: 60px;
+} */
+
+.custom-modal {
+  position: fixed;
+  top: 64px; /* Nastavení, aby modal začínal pod navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1); /* Plně neprůhledné černé pozadí */
+  display: flex;
+  align-items: flex-start; /* Zarovnání obsahu na začátek modalu */
+  justify-content: center;
+  overscroll-behavior: none;
+  visibility: hidden;
+  z-index: 100;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.custom-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-contentt {
+  width: 100%; /* Nebo méně, podle potřeby designu */
+  max-width: 100%; /* Maximální šířka modalu */
+  height: calc(100vh - 64px); /* Výška modalu po odečtení navbaru */
+  overflow-y: auto; /* Povolení vertikálního skrolování */
+  padding: 20px; /* Vnitřní okraje pro obsah */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidání stínu pro lepší vizuální oddělení */
+}
+
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
