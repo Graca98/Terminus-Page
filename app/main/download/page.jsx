@@ -1,5 +1,5 @@
 
-import Download from "@/app/components/Hlavni-stranka/Download"
+import Download from "@/app/components/Obsah_Stranek/Hlavni-stranka/Download"
 
 
 

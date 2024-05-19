@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "@/app/components/pricing-components/Pricing.css"
+import "./Pricing.css"
 import PricingTab from "./PricingTab";
 import PricingInfo from "./PricingInfo";
 

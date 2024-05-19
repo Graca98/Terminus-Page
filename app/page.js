@@ -1,4 +1,4 @@
-import Informace from "./components/Hlavni-stranka/Informace";
+import Informace from "./components/Obsah_Stranek/Hlavni-stranka/Informace";
 
 
 export default function Home() {

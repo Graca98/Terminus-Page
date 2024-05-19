@@ -1,5 +1,5 @@
 
-import Pravidla from "@/app/components/Hlavni-stranka/Pravidla"
+import Pravidla from "@/app/components/Obsah_Stranek/Hlavni-stranka/Pravidla"
 
 
 

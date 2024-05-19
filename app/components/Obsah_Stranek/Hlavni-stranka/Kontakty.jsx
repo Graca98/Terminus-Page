@@ -1,5 +1,5 @@
-import LinkHover from "../LinkHover";
-import CopyButton from "../CopyButton";
+import LinkHover from "../../LinkHover";
+import CopyButton from "../../CopyButton";
 
 export default function Kontakty() {
 

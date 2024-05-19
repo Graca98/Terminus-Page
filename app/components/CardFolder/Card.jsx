@@ -1,7 +1,11 @@
 import CardText from "./CardText"
 import CardImg from "./CardImg"
 
-const Card = ({ imgSrc, name, role, description, insta = "Zatím nemá", discord = "Zatím nemá" }) => {
+const Card = ({ imgSrc, name, role, description, discord = "Zatím nemá" }) => {
+
+  const adminCards = () => {
+
+  }
 
   return (
     <div className="mx-auto max-w-md bg-white hover:bg-sky-200 px-4 py-4 my-6 rounded-lg shadow-md shadow-cyan-500/50">
@@ -15,7 +19,6 @@ const Card = ({ imgSrc, name, role, description, insta = "Zatím nemá", discord
             name={name}
             role={role}
             description={description}
-            insta={insta}
             discord={discord}
           ></CardText>
         </div>
@@ -23,5 +26,13 @@ const Card = ({ imgSrc, name, role, description, insta = "Zatím nemá", discord
     </div>
   );
 }
-
 export default Card
+
+export async function getServerSideProps() {
+  // Získej data z externího API
+  const res = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=10');
+  const photos = await res.json();
+
+  // Předání dat do komponenty prostřednictvím props
+  return { props: { photos } };
+}

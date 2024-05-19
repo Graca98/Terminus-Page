@@ -1,5 +1,5 @@
 
-import Pricing from "@/app/components/pricing-components/Pricing"
+import Pricing from "@/app/components/Obsah_Stranek/Vip/Skyblock/pricing-skyblock/Pricing"
 
 
 
