@@ -84,35 +84,35 @@ const Informace = () => {
             Seznam server listů, které měly potřebu být na našich stránkách.
           </p>
           <div className="flex gap-3 flex-col md:flex-row ">
-            <a href="https://www.minelist.eu" target="_blank">
+            <a href="https://www.minelist.eu" target="_blank" className="overflow-hidden">
               <img
                 src="https://www.minelist.eu/images/bannery/Ikonka2.png"
                 alt="Minelist.eu"
                 className="h-8 img-hover"
               />
             </a>
-            <a href="https://www.serverbook.cz" target="_blank">
+            <a href="https://www.serverbook.cz" target="_blank" className="overflow-hidden">
               <img
                 src="https://www.serverbook.cz/images/banner_88_31.png"
                 alt="ServerBook.cz"
                 className="h-8 img-hover"
               />
             </a>
-            <a href="https://craftlist.org">
+            <a href="https://craftlist.org" className="overflow-hidden">
               <img
                 src="https://minecraft-servery.cz/img/icons/icon_default.png"
                 alt="Minecraft Serverlist"
                 className="h-8 img-hover"
               />
             </a>
-            <a href="http://minecraft-server-list.cz" target="_blank">
+            <a href="http://minecraft-server-list.cz" target="_blank" className="overflow-hidden">
               <img
                 src="http://minecraft-server-list.cz/images/4_ico.jpg"
                 alt="minecraft-server-list.cz"
                 className="h-8 img-hover"
               />
             </a>
-            <a href="https://minebook.eu/view/">
+            <a href="https://minebook.eu/view/" className="overflow-hidden">
               <img
                 src="https://minebook.eu/assets/images/minebook-full.png"
                 alt="Minebook"
