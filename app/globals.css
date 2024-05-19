@@ -7,18 +7,37 @@
   .img-hover {
     @apply transition ease-in-out duration-300 hover:scale-105;
   }
-  /* .container-fluid {
-    @apply max-w-screen-2xl mx-auto p-6 md:p-16;
-  } */
+
+  /* Bíle gradient pozadí (púokračuje dole) */
   .myBackground {
     @apply text-gray-900 flex flex-col;
   }
+
+  /* Max šírka pro navbar + zarovnání na střed */
   .container-navbar {
     @apply shadow-none mx-auto max-w-screen-xl w-full px-4;
   }
+
+  /* Maximální šírka obsahu stránek + zarovnání na střed */
   .container-default {
     @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow;
   }
+
+  .btn-nav-dropdown,
+  .btn-nav {
+    @apply btn btn-primary bg-termi my-2 hover:bg-inherit hover:text-stone-300;
+  }
+  .btn-nav-dropdown {
+    @apply pl-2.5 pr-1.5;
+  }
+  .btn-nav {
+    @apply pl-2.5 pr-2.5;
+  }
+  /*todo Dodělat btn-nav-item + napojit na nav dropdowny */
+  .btn-nav-item {
+    @apply dropdown-item text-sm hover:bg-gray-500;
+  }
+
   .bg-termi {
     background-color: #212529;
   }
@@ -86,9 +105,10 @@ body {
   top: 60px;
 } */
 
+/* Navigační menu pro mobile/tablet */
 .custom-modal {
   position: fixed;
-  top: 64px; /* Nastavení, aby modal začínal pod navbar */
+  top: 56px; /* Nastavení, aby modal začínal pod navbar */
   left: 0;
   right: 0;
   bottom: 0;
@@ -111,7 +131,7 @@ body {
 .modal-contentt {
   width: 100%; /* Nebo méně, podle potřeby designu */
   max-width: 100%; /* Maximální šířka modalu */
-  height: calc(100vh - 64px); /* Výška modalu po odečtení navbaru */
+  height: calc(100vh - 56px); /* Výška modalu po odečtení navbaru */
   overflow-y: auto; /* Povolení vertikálního skrolování */
   padding: 20px; /* Vnitřní okraje pro obsah */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidání stínu pro lepší vizuální oddělení */

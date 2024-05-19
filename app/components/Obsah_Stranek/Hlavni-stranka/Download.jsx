@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkHover from "../LinkHover";
+import LinkHover from "../../LinkHover";
 import rulesIcon from "@/app/img/rulesIco.png"
 import sfIcon from "@/app/img/sFIco.png"
 

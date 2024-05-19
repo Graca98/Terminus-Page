@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Skin({ name, className }) {
   const [data, setData] = useState(null);
@@ -34,18 +35,20 @@ export default function Skin({ name, className }) {
   if (isLoading) {
     return (
       <div
-        className={`h-60 w-24 rounded-md animate-pulse bg-neutral-300`}
+        className={`skeleton h-60 w-24 rounded-md`}
       ></div>
     )
   }
 
   return (
-    <div>
-      <img
+    <div className="flex items-center justify-center">
+      <Image
         src={data || "@/app/img/defaultSteve.png"}
-        className={className}
-        alt={`${name} minecraft skin`}
-      ></img>
+        className={`${className} object-cover`}
+        alt={`${name.length > 0 ? name : "Steve"} minecraft skin`}
+        width={100}
+        height={240}
+      ></Image>
     </div>
   );
 }
