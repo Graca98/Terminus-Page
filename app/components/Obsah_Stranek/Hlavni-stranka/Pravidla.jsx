@@ -1,5 +1,4 @@
 import Image from "next/image";
-import rulesIcon from "@/app/img/rulesIco.png"
 
 const Pravidla = () => {
   return (
@@ -153,7 +152,7 @@ const Pravidla = () => {
             <a href="download/tcraft_pravidla.pdf" target="_blank">
               {/* Doplnit link!! */}
               <li className="inline-block bg-yellow-500 p-5 rounded-full img-hover hover:rotate-45">
-                <Image src={rulesIcon} alt="Pravidla ke stažení"></Image>
+                <Image src="/img/rulesIcon.png" width={54} height={50} alt="Pravidla ke stažení"></Image>
               </li>
             </a>
           </ul>

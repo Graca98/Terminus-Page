@@ -78,18 +78,18 @@ export default function NavModal() {
       >
 
         <aside className="sidebar justify-start max-h-full max-w-full w-full h-full modal-contentt">
-          <section className="sidebar-content h-fit min-h-[20rem] overflow-visible">
+          <section className="sidebar-content h-fit min-h-[20rem] overflow-visible py-0">
             <nav className="menu rounded-md">
               <section className="menu-section px-4">
                 {/* <span className="menu-title">Main menu</span> */}
-                <ul className="menu-items">
+                <ul className="menu-items ">
 
                   {/* Hlavní stránka */}
                   <li>
                     <input type="checkbox" id="menu-main" className="menu-toggle" />
                     <label className="menu-item justify-between" htmlFor="menu-main">
                       <div className="flex gap-2">
-                        <span className="">Hlavní Stránka</span>
+                        <span className="text-xl">Hlavní Stránka</span>
                       </div>
 
                       <span className="menu-icon">
@@ -101,16 +101,16 @@ export default function NavModal() {
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/" onClick={toggleModal} className={`menu-item ml-6`}>
+                        <Link href="/" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
                           Informace
                         </Link>
-                        <Link href="/main/pravidla" onClick={toggleModal} className={`menu-item ml-6`}>
+                        <Link href="/main/pravidla" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
                           Pravidla
                         </Link>
-                        <Link href="/main/download" onClick={toggleModal} className={`menu-item ml-6`}>
+                        <Link href="/main/download" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
                           Ke stažení
                         </Link>
-                        <Link href="/main/kontakty" onClick={toggleModal} className={`menu-item ml-6`}>
+                        <Link href="/main/kontakty" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
                           Kontakty
                         </Link>
                       </div>
@@ -121,7 +121,7 @@ export default function NavModal() {
                     <input type="checkbox" id="menu-servers" className="menu-toggle" />
                     <label className="menu-item justify-between" htmlFor="menu-servers">
                       <div className="flex gap-2">
-                        <span className="">Servery</span>
+                        <span className="text-xl">Servery</span>
                       </div>
 
                       <span className="menu-icon">
@@ -133,9 +133,9 @@ export default function NavModal() {
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/servers/jak-se-pripojit" onClick={toggleModal} className={`menu-item ml-6`}>Jak se připojit</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6`}>Skyblock</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6`}>Survival</Link>
+                        <Link href="/servers/jak-se-pripojit" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Jak se připojit</Link>
+                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Skyblock</Link>
+                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Survival</Link>
                       </div>
                     </div>
                   </li>
@@ -144,7 +144,7 @@ export default function NavModal() {
                     <input type="checkbox" id="menu-vip" className="menu-toggle" />
                     <label className="menu-item justify-between" htmlFor="menu-vip">
                       <div className="flex gap-2">
-                        <span className="">Výhody</span>
+                        <span className="text-xl">Výhody</span>
                       </div>
 
                       <span className="menu-icon">
@@ -156,22 +156,22 @@ export default function NavModal() {
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/vip/skyblock" onClick={toggleModal} className={`menu-item ml-6`}>Skyblock</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6`}>Survival</Link>
+                        <Link href="/vip/skyblock" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Skyblock</Link>
+                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Survival</Link>
                       </div>
                     </div>
                   </li>
                   <li className="menu-item">
                     <span>
-                      <Link href="/admin-team" onClick={toggleModal} className="">Admin Team</Link>
+                      <Link href="/admin-team" onClick={toggleModal} className="text-xl">Admin Team</Link>
                     </span>
                   </li>
 
                   <li className="menu-item menu-active">
-                    <Link href="https://bans.tcraft.eu/" target='_blank' onClick={toggleModal} className="">Bany</Link>
+                    <Link href="https://bans.tcraft.eu/" target='_blank' onClick={toggleModal} className="text-xl">Bany</Link>
                   </li>
                   <li className="menu-item">
-                    <Link href="https://tcrafteu.craftingstore.net/" target='_blank' onClick={toggleModal} className="">Store</Link>
+                    <Link href="https://tcrafteu.craftingstore.net/" target='_blank' onClick={toggleModal} className="text-xl">Store</Link>
                   </li>
 
                 </ul>
