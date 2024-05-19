@@ -1,5 +1,6 @@
-import img1 from "@/app/img/servers/connect0.jpg"
+import img1 from "@/app/img/servers/Skyblock1.jpg"
 import img2 from "@/app/img/servers/connect1.png"
+import Image from "next/image"
 
 export default function JakSePripojit() {
   return (
@@ -27,7 +28,7 @@ export default function JakSePripojit() {
           <h2 className="text-2xl font-bold">Jak se připojit a hrát</h2>
           <p className="mb-0">Jednoduše spusťte Minecraft a v hlavním menu zvolte tlačítko "Multiplayer". Následně dle obrázku zvolte "Add Server".</p>
           <div className="flex justify-center my-3">
-            <img className="hover:opacity-75" src={img1} alt="Připojení" />
+            <Image className="hover:opacity-75" src="/img/connect0.jpg" width={450} height={140} alt="Připojení" />
           </div>
           <p className="mb-0">
             Do kolonky Server Name můžete napsat cokoliv dle vlastní volby. Do kolonky Server Address vložte IP adresu serveru.
@@ -37,7 +38,7 @@ export default function JakSePripojit() {
             SkyBlock: play.tcraft.eu
           </p>
           <div className="flex justify-center my-3">
-            <img className="hover:opacity-75" src={img2} alt="Připojení" />
+            <img className="hover:opacity-75" src="@/app/img/connect1.png" alt="Připojení" />
           </div>
           <p className="mb-0">
             Nyní stačí kliknout na tlačítko "Done" a je hotovo! Můžete se připojit na náš server a do naší skvělé komunity. Uvidíme se tam!
