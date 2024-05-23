@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
 import LinkHover from "../../LinkHover";
 import CopyButton from "../../CopyButton";
 
 const Informace = () => {
-
   //todo Dodělat copyIp
   //todo Přidat linky na odkazy (až bude pravý web)
 
@@ -38,17 +37,28 @@ const Informace = () => {
 
             <li>
               Máš zájem nás podpořit v tom, co děláme?
-              <LinkHover href="https://store.tcraft.eu/" text="Tady"></LinkHover>
+              <LinkHover
+                href="https://store.tcraft.eu/"
+                text="Tady"
+              ></LinkHover>
             </li>
 
             <li>
               Nebo se k nám připojit na discord a pokecat?
-              <LinkHover href="https://discord.gg/FxsVHJP" text="Bez problému" target="_blank"></LinkHover>
+              <LinkHover
+                href="https://discord.gg/FxsVHJP"
+                text="Bez problému"
+                target="_blank"
+              ></LinkHover>
             </li>
 
             <li>
               Líbí se ti náš server a chceš, aby se o něm dozvědělo více lidí?
-              <LinkHover href="https://czech-craft.eu/server/terminuscraft/" text="Hlasuj" target="_blank"></LinkHover>
+              <LinkHover
+                href="https://czech-craft.eu/server/terminuscraft/"
+                text="Hlasuj"
+                target="_blank"
+              ></LinkHover>
             </li>
           </ul>
         </article>
@@ -67,14 +77,21 @@ const Informace = () => {
           <h4>Na všechny naše servery se připojíte z jedné IP:</h4>
           <div className="pb-2 me-1 my-2">
             Minecraft:
-            <span className="lg:tooltip lg:tooltip-right pr-3" data-tooltip="Klikněte pro zkopírování do schránky">
+            <span
+              className="lg:tooltip lg:tooltip-right pr-3"
+              data-tooltip="Klikněte pro zkopírování do schránky"
+            >
               {/* <CopyButton style={`py-1.5 px-3 ms-1 transition ease-in-out duration-300 active:bg-gray-800 active:transition active:ease-out active:duration-200 hover:bg-black hover:text-white border border-black rounded-md bg-transparent transition ease-in-out duration-300 inline-flex items-center justify-center text-center text-sm `}></CopyButton> */}
               <CopyButton style=""></CopyButton>
             </span>
           </div>
           <p>
             Discord:
-            <LinkHover href="http://discord.gg/FxsVHJP" text="Terminus Craft" target="_blank"></LinkHover>
+            <LinkHover
+              href="http://discord.gg/FxsVHJP"
+              text="Terminus Craft"
+              target="_blank"
+            ></LinkHover>
           </p>
         </article>
 
@@ -84,14 +101,22 @@ const Informace = () => {
             Seznam server listů, které měly potřebu být na našich stránkách.
           </p>
           <div className="flex gap-3 flex-col md:flex-row ">
-            <a href="https://www.minelist.eu" target="_blank" className="overflow-hidden">
+            <a
+              href="https://www.minelist.eu"
+              target="_blank"
+              className="overflow-hidden"
+            >
               <img
                 src="https://www.minelist.eu/images/bannery/Ikonka2.png"
                 alt="Minelist.eu"
                 className="h-8 img-hover"
               />
             </a>
-            <a href="https://www.serverbook.cz" target="_blank" className="overflow-hidden">
+            <a
+              href="https://www.serverbook.cz"
+              target="_blank"
+              className="overflow-hidden"
+            >
               <img
                 src="https://www.serverbook.cz/images/banner_88_31.png"
                 alt="ServerBook.cz"
@@ -105,7 +130,11 @@ const Informace = () => {
                 className="h-8 img-hover"
               />
             </a>
-            <a href="http://minecraft-server-list.cz" target="_blank" className="overflow-hidden">
+            <a
+              href="http://minecraft-server-list.cz"
+              target="_blank"
+              className="overflow-hidden"
+            >
               <img
                 src="http://minecraft-server-list.cz/images/4_ico.jpg"
                 alt="minecraft-server-list.cz"
@@ -123,7 +152,6 @@ const Informace = () => {
         </article>
       </section>
     </div>
-
   );
 };
 
