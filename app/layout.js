@@ -1,21 +1,20 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from './components/Navbar'
-import NavbarRipple from "./components/navigation/NavbarRipple";
+import Navbar from "./components/navigation/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Terminus',
-  description: 'TerminusCraft website for minecraft',
+  title: "Terminus",
+  description: "Webová stránka pro Terminus minecraft server",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="cs">
       <body className={inter.className}>
-        {/* <Navbar content={children}></Navbar> */}
-        <NavbarRipple content={children}></NavbarRipple>
+        <link rel="icon" href="/img/favicon.png" sizes="any" />
+        <Navbar content={children}></Navbar>
       </body>
     </html>
   );

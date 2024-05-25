@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import NavLink from "../NavLink";
 import React, { useState } from "react";
+import NavLink from "../NavLink";
 
-const DropdownVip = () => {
+const DropdownServers = () => {
   const arrowDown = (
     <svg
       className="fill-current h-5 w-5"
@@ -34,21 +34,30 @@ const DropdownVip = () => {
       onMouseLeave={() => setArrow(arrowDown)}
     >
       <label className="btn-nav-dropdown text-nowrap" tabIndex="0">
-        <Link href="/vip/skyblock" className="">
-          Výhody
+        <Link href="/servers/jak-se-pripojit" className="">
+          Servery
         </Link>
-
         {arrow}
       </label>
       <div className="dropdown-menu dropdown-menu-bottom-right bg-termi">
         <NavLink
-          href="/vip/skyblock"
+          href="/servers/jak-se-pripojit"
+          name="Jak se připojit"
+          className="dropdown-item text-sm hover:bg-gray-500"
+        ></NavLink>
+        <NavLink
+          href="/servers/skyblock"
           name="Skyblock"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
         <NavLink
-          href="/vip/survival"
+          href="/servers/survival"
           name="Survival"
+          className="dropdown-item text-sm hover:bg-gray-500"
+        ></NavLink>
+        <NavLink
+          href="/servers/event"
+          name="Event"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
       </div>
@@ -56,4 +65,4 @@ const DropdownVip = () => {
   );
 };
 
-export default DropdownVip;
+export default DropdownServers;

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import LinkHover from "../LinkHover";
-import rulesIcon from "@/app/img/rulesIco.png"
-import sfIcon from "@/app/img/sFIco.png"
+import LinkHover from "../../LinkHover";
+// import rulesIcon from "@/app/img/rulesIco.png"
+// import sfIcon from "@/app/img/sFIco.png"
 
 const Download = () => {
   return <div className="container-default">
@@ -17,7 +17,7 @@ const Download = () => {
         <p className="text-lg">Navod k instalaci (aktuálně na verzi 1.18.1):</p>
         <ol className="list-decimal ps-8 mb-5">
           <li>
-            Nejprve nainstalujte <a href="https://optifine.net/downloads" className="link link-primary underline underline-offset-4" target="_blank">
+            Nejprve nainstalujte <a href="https://optifine.net/downloads" className="link link-primary" target="_blank">
               Optifine
             </a> na Vaši verzi Minecraftu.
           </li>
@@ -32,7 +32,7 @@ const Download = () => {
           <a href="download/Slimefun_Texture_v3.1.1.zip" target="_blank">
             {/* Doplnit link!! */}
             <li className="inline-block bg-yellow-500 p-5 rounded-full img-hover hover:rotate-45">
-              <Image src={sfIcon} alt="Texturepack ke stažení"></Image>
+              <Image src="/img/sfIcon2.png" width={54} height={50} alt="Texturepack ke stažení"></Image>
             </li>
           </a>
         </ul>
@@ -45,7 +45,7 @@ const Download = () => {
           <a href="download/tcraft_pravidla.pdf" target="_blank">
             {/* Doplnit link!! */}
             <li className="inline-block bg-yellow-500 p-5 rounded-full img-hover hover:rotate-45">
-              <Image src={rulesIcon} alt="Pravidla ke stažení"></Image>
+              <Image src="/img/rulesIcon.png" width={54} height={50} alt="Pravidla ke stažení"></Image>
             </li>
           </a>
         </ul>

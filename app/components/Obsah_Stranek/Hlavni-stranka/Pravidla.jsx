@@ -1,5 +1,4 @@
 import Image from "next/image";
-import rulesIcon from "@/app/img/rulesIco.png"
 
 const Pravidla = () => {
   return (
@@ -57,7 +56,9 @@ const Pravidla = () => {
         </article>
 
         <article className="mb-12">
-          <h4 className="text-xl font-medium mb-1">Pravidla Survival serveru:</h4>
+          <h4 className="text-xl font-medium mb-1">
+            Pravidla Survival serveru:
+          </h4>
           <ol className="list-decimal ps-8 mb-4">
             <li>
               Chovat se slušně, nenadávat, neponižovat, nevyvyšovat se nad
@@ -108,7 +109,9 @@ const Pravidla = () => {
         </article>
 
         <article className="mb-12">
-          <h4 className="text-xl font-medium mb-1">Pravidla Discord serveru:</h4>
+          <h4 className="text-xl font-medium mb-1">
+            Pravidla Discord serveru:
+          </h4>
           <ol className="list-decimal ps-8 mb-4">
             <li>
               Chovat se slušně, nenadávat, neponižovat, nevyvyšovat se nad
@@ -148,12 +151,19 @@ const Pravidla = () => {
             </div>
           </div> */}
 
-          <p className="mb-5">Plné znění pravidel v platnosti od 14.4.2020 ke stažení zde:</p>
+          <p className="mb-5">
+            Plné znění pravidel v platnosti od 14.4.2020 ke stažení zde:
+          </p>
           <ul className="ps-8">
             <a href="download/tcraft_pravidla.pdf" target="_blank">
               {/* Doplnit link!! */}
               <li className="inline-block bg-yellow-500 p-5 rounded-full img-hover hover:rotate-45">
-                <Image src={rulesIcon} alt="Pravidla ke stažení"></Image>
+                <Image
+                  src="/img/rulesIcon.png"
+                  width={54}
+                  height={50}
+                  alt="Pravidla ke stažení"
+                ></Image>
               </li>
             </a>
           </ul>

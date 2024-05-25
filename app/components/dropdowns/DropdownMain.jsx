@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import NavLink from "../NavLink";
+
 import React, { useState } from "react";
 
-const DropdownVip = () => {
+const DropdownMain = () => {
   const arrowDown = (
     <svg
       className="fill-current h-5 w-5"
@@ -34,21 +35,30 @@ const DropdownVip = () => {
       onMouseLeave={() => setArrow(arrowDown)}
     >
       <label className="btn-nav-dropdown text-nowrap" tabIndex="0">
-        <Link href="/vip/skyblock" className="">
-          Výhody
+        <Link href="/" className="text-nowrap">
+          Hlavní stránka
         </Link>
-
         {arrow}
       </label>
       <div className="dropdown-menu dropdown-menu-bottom-right bg-termi">
         <NavLink
-          href="/vip/skyblock"
-          name="Skyblock"
+          href="/"
+          name="Informace"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
         <NavLink
-          href="/vip/survival"
-          name="Survival"
+          href="/main/pravidla"
+          name="Pravidla"
+          className="dropdown-item text-sm hover:bg-gray-500"
+        ></NavLink>
+        <NavLink
+          href="/main/download"
+          name="Ke stažení"
+          className="dropdown-item text-sm hover:bg-gray-500"
+        ></NavLink>
+        <NavLink
+          href="/main/kontakty"
+          name="Kontakty"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
       </div>
@@ -56,4 +66,4 @@ const DropdownVip = () => {
   );
 };
 
-export default DropdownVip;
+export default DropdownMain;
