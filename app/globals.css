@@ -23,6 +23,14 @@
     @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow;
   }
 
+  .faq-answer, .faq-item {
+    @apply text-gray-700;
+  }
+
+  .faq-answer {
+    @apply mb-3
+  }
+
   .btn-nav-dropdown,
   .btn-nav {
     @apply btn btn-primary bg-termi my-2 hover:bg-inherit hover:text-stone-300;
@@ -44,6 +52,7 @@
   .bg-termi-hover {
     background-color: #3f454b;
   }
+
 }
 
 :root {
@@ -99,11 +108,6 @@ body {
     rgba(240, 255, 255, 0.4) 140%
   );
 }
-
-/* -60px šírka modalu na mobilní nav */
-/* .nav-h {
-  top: 60px;
-} */
 
 /* Navigační menu pro mobile/tablet */
 .custom-modal {

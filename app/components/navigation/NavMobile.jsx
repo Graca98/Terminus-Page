@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
 import NavIcon from "./NavIcon";
-import NavCrossIcon from "./NavCrossIcon"
-import Link from "next/link";
-import React, { useState, useRef, useEffect } from 'react';
+import NavCrossIcon from "./NavCrossIcon";
+import NavLink from "../NavLink";
+import React, { useState, useRef, useEffect } from "react";
 
 export default function NavModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,39 +19,40 @@ export default function NavModal() {
     const body = document.body;
     if (isOpen) {
       modalRef.current.focus();
-      body.style.overflow = 'hidden'; // Zabránění skrolování na hlavní stránce
+      body.style.overflow = "hidden"; // Zabránění skrolování na hlavní stránce
     } else {
-      body.style.overflow = 'visible'; // Obnovení skrolování
+      body.style.overflow = "visible"; // Obnovení skrolování
     }
     return () => {
-      body.style.overflow = 'visible'; // Ensure scrolling is restored if the component unmounts
+      body.style.overflow = "visible"; // Ensure scrolling is restored if the component unmounts
     };
   }, [isOpen]);
 
   // Přidání a odebrání posluchače pro klávesnici
   useEffect(() => {
     function handleKeyDown(event) {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         setIsOpen(false);
-      } else if (event.key === 'Tab' && isOpen) {
+      } else if (event.key === "Tab" && isOpen) {
         handleTabKey(event);
       }
     }
 
     if (isOpen) {
-      window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
     }
   }, [isOpen]);
 
   // Handle Tab key to trap focus within the modal
   const handleTabKey = (event) => {
     const focusableElements = modalRef.current.querySelectorAll(
-      'a[href], button, textarea, input, select'
+      "a[href], button, textarea, input, select",
     );
     focusableElementsRef.current = Array.from(focusableElements);
     const firstElement = focusableElementsRef.current[0];
-    const lastElement = focusableElementsRef.current[focusableElementsRef.current.length - 1];
+    const lastElement =
+      focusableElementsRef.current[focusableElementsRef.current.length - 1];
 
     if (event.shiftKey && document.activeElement === firstElement) {
       lastElement.focus();
@@ -64,116 +65,223 @@ export default function NavModal() {
 
   return (
     <>
-      <button onClick={toggleModal} className="btn bg-termi-hover w-14 h-10 p-2" aria-expanded={isOpen} aria-controls="custom-modal-content">
+      <button
+        onClick={toggleModal}
+        className="btn bg-termi-hover w-14 h-10 p-2"
+        aria-expanded={isOpen}
+        aria-controls="custom-modal-content"
+      >
         {isOpen ? <NavCrossIcon /> : <NavIcon />}
       </button>
       <div
-        className={`custom-modal ${isOpen ? 'active' : ''}`}
+        className={`custom-modal ${isOpen ? "active" : ""}`}
         tabIndex="-1"
         ref={modalRef}
-        style={{ outline: 'none' }}
+        style={{ outline: "none" }}
         role="dialog"
         aria-modal="true"
         id="custom-modal-content"
       >
-
         <aside className="sidebar justify-start max-h-full max-w-full w-full h-full modal-contentt">
-          <section className="sidebar-content h-fit min-h-[20rem] overflow-visible py-0">
+          <section className="sidebar-content h-fit min-h-[20rem] overflow-visible py-0 mb-8">
             <nav className="menu rounded-md">
-              <section className="menu-section px-4">
+              <section className="menu-section px-4 mb-24">
                 {/* <span className="menu-title">Main menu</span> */}
                 <ul className="menu-items ">
-
                   {/* Hlavní stránka */}
                   <li>
-                    <input type="checkbox" id="menu-main" className="menu-toggle" />
-                    <label className="menu-item justify-between" htmlFor="menu-main">
+                    <input
+                      type="checkbox"
+                      id="menu-main"
+                      className="menu-toggle"
+                    />
+                    <label
+                      className="menu-item justify-between"
+                      htmlFor="menu-main"
+                    >
                       <div className="flex gap-2">
-                        <span className="text-xl">Hlavní Stránka</span>
+                        <span className="text-base">Hlavní Stránka</span>
                       </div>
 
                       <span className="menu-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </span>
                     </label>
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
-                          Informace
-                        </Link>
-                        <Link href="/main/pravidla" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
-                          Pravidla
-                        </Link>
-                        <Link href="/main/download" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
-                          Ke stažení
-                        </Link>
-                        <Link href="/main/kontakty" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>
-                          Kontakty
-                        </Link>
+                        <NavLink
+                          href="/"
+                          name="Informace"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="/main/pravidla"
+                          name="Pravidla"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="/main/download"
+                          name="Ke stažení"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="/main/kontakty"
+                          name="Kontakty"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
                       </div>
                     </div>
                   </li>
                   {/* Servery */}
                   <li>
-                    <input type="checkbox" id="menu-servers" className="menu-toggle" />
-                    <label className="menu-item justify-between" htmlFor="menu-servers">
+                    <input
+                      type="checkbox"
+                      id="menu-servers"
+                      className="menu-toggle"
+                    />
+                    <label
+                      className="menu-item justify-between"
+                      htmlFor="menu-servers"
+                    >
                       <div className="flex gap-2">
-                        <span className="text-xl">Servery</span>
+                        <span className="text-base">Servery</span>
                       </div>
 
                       <span className="menu-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </span>
                     </label>
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/servers/jak-se-pripojit" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Jak se připojit</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Skyblock</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Survival</Link>
+                        <NavLink
+                          href="/servers/jak-se-pripojit"
+                          name="Jak se připojit"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="#"
+                          name="Skyblock"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="#"
+                          name="Survival"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl menu-item-disabled`}
+                        ></NavLink>
+                        <NavLink
+                          href="#"
+                          name="Event"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl menu-item-disabled`}
+                        ></NavLink>
                       </div>
                     </div>
                   </li>
                   {/* Výhody */}
                   <li>
-                    <input type="checkbox" id="menu-vip" className="menu-toggle" />
-                    <label className="menu-item justify-between" htmlFor="menu-vip">
+                    <input
+                      type="checkbox"
+                      id="menu-vip"
+                      className="menu-toggle"
+                    />
+                    <label
+                      className="menu-item justify-between"
+                      htmlFor="menu-vip"
+                    >
                       <div className="flex gap-2">
-                        <span className="text-xl">Výhody</span>
+                        <span className="text-base">Výhody</span>
                       </div>
 
                       <span className="menu-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </span>
                     </label>
 
                     <div className="menu-item-collapse">
                       <div className="min-h-0">
-                        <Link href="/vip/skyblock" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Skyblock</Link>
-                        <Link href="#" onClick={toggleModal} className={`menu-item ml-6 text-xl`}>Survival</Link>
+                        <NavLink
+                          href="/vip/skyblock"
+                          name="Skyblock"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl`}
+                        ></NavLink>
+                        <NavLink
+                          href="#"
+                          name="Survival"
+                          onClick={toggleModal}
+                          className={`menu-item ml-6 text-xl menu-item-disabled`}
+                        ></NavLink>
                       </div>
                     </div>
                   </li>
-                  <li className="menu-item">
-                    <span>
-                      <Link href="/admin-team" onClick={toggleModal} className="text-xl">Admin Team</Link>
-                    </span>
+                  <li>
+                    <NavLink
+                      href="/admin-team"
+                      name="Admin Team"
+                      onClick={toggleModal}
+                      className="text-xl menu-item"
+                    ></NavLink>
                   </li>
-
-                  <li className="menu-item menu-active">
-                    <Link href="https://bans.tcraft.eu/" target='_blank' onClick={toggleModal} className="text-xl">Bany</Link>
+                  <li>
+                    <NavLink
+                      href="https://bans.tcraft.eu/"
+                      name="Bany"
+                      target="_blank"
+                      onClick={toggleModal}
+                      className="text-xl menu-item"
+                    ></NavLink>
                   </li>
-                  <li className="menu-item">
-                    <Link href="https://tcrafteu.craftingstore.net/" target='_blank' onClick={toggleModal} className="text-xl">Store</Link>
+                  <li>
+                    <NavLink
+                      href="https://tcrafteu.craftingstore.net/"
+                      name="Store"
+                      target="_blank"
+                      onClick={toggleModal}
+                      className="text-xl menu-item"
+                    ></NavLink>
                   </li>
-
                 </ul>
               </section>
             </nav>
@@ -184,9 +292,8 @@ export default function NavModal() {
   );
 }
 
-
-
-{/* <div className="flex flex-col gap-6">
+{
+  /* <div className="flex flex-col gap-6">
   <div id="main-links" className="text-white">
     <h2 className="text-xl">Hlavní stránka</h2>
     <Link href="/" onClick={toggleModal} className={`dropdown-item text-sm a`}>
@@ -214,11 +321,15 @@ export default function NavModal() {
       Survival
     </Link>
   </div>
-</div> */}
-{/* <label className="btn bg-termi-hover p-2" htmlFor="modal-2">
+</div> */
+}
+{
+  /* <label className="btn bg-termi-hover p-2" htmlFor="modal-2">
         <NavIcon />
-      </label> */}
-{/* <input className="modal-state" id="modal-2" type="checkbox" />
+      </label> */
+}
+{
+  /* <input className="modal-state" id="modal-2" type="checkbox" />
       <div className="modal nav-modal p-0">
         <label className="modal-overlay" htmlFor="modal-2"></label>
         <div className="modal-content flex flex-col gap-5 max-h-full max-w-full w-full nav-h h-full rounded-none">
@@ -256,5 +367,5 @@ export default function NavModal() {
             </Link>
           </div>
         </div>
-      </div> */}
-
+      </div> */
+}
