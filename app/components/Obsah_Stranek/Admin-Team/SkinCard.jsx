@@ -10,11 +10,7 @@ export default function SkinCard({
   discord = "",
 }) {
   const validateName = name.length >= 21 ? name.slice(0, 21) : name;
-  let validateDesc = desc.length > 0 ? desc : "Náš parádní Steve";
-  validateDesc =
-    validateDesc.length > 100
-      ? validateDesc.slice(0, 100) + "..."
-      : validateDesc;
+  let validateDesc = desc.length > 100 ? desc.slice(0, 100) + "..." : desc;
 
   return (
     <div className="card block bg-inherit max-w-72 lg:max-w-md xl:max-w-none shadow-none">
@@ -34,7 +30,7 @@ export default function SkinCard({
             <p className="">{validateDesc}</p>
           </div>
           <div className="card-footer text-gray-500 col-span-1 md:col-span-2 gap-1">
-            {<DiscordIcon />}
+            {discord.length > 0 ? <DiscordIcon /> : null}
             {discord}
           </div>
         </div>

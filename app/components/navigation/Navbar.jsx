@@ -30,39 +30,29 @@ export default function Navbar({ content }) {
             <DropdownMain />
             <DropdownServers />
             <DropdownVip />
-            <Link href="/admin-team" className="btn-nav text-nowrap">
-              Admin Team
-            </Link>
-            <Link
-              href="https://bans.tcraft.eu/"
-              target="_blank"
-              className="btn-nav text-nowrap"
-            >
-              Bany
-            </Link>
-            <Link
-              href="https://tcrafteu.craftingstore.net/"
-              target="_blank"
-              className="btn-nav text-nowrap"
-            >
-              Store
-            </Link>
             <NavLink
               href="/admin-team"
               name="Admin Team"
-              className="btn-nav text-nowrap"
+              className="btn-nav text-nowrap py-2"
             />
             <NavLink
-              href="/"
-              name="Informace"
-              className="btn-nav text-nowrap"
-            />
+              href="https://bans.tcraft.eu/"
+              name="Bany"
+              target="_blank"
+              className="btn-nav text-nowrap py-2"
+            ></NavLink>
+            <NavLink
+              href="https://tcrafteu.craftingstore.net/"
+              name="Store"
+              target="_blank"
+              className="btn-nav text-nowrap py-2"
+            ></NavLink>
           </div>
 
           <div className="navbar-end hidden lg:flex">
             <a className="navbar-item">Přihlásit</a>
             <a className="navbar-item btn btn-success bg-green-600">
-              Registrovat se
+              Registrovat
             </a>
           </div>
 

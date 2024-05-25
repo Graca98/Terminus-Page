@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import NavLink from "../NavLink";
 
 const DropdownServers = () => {
   const arrowDown = (
@@ -39,30 +40,26 @@ const DropdownServers = () => {
         {arrow}
       </label>
       <div className="dropdown-menu dropdown-menu-bottom-right bg-termi">
-        <Link
+        <NavLink
           href="/servers/jak-se-pripojit"
+          name="Jak se připojit"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Jak se připojit
-        </Link>
-        <Link
+        ></NavLink>
+        <NavLink
           href="/servers/skyblock"
+          name="Skyblock"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Skyblock
-        </Link>
-        <Link
+        ></NavLink>
+        <NavLink
           href="/servers/survival"
+          name="Survival"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Survival
-        </Link>
-        <Link
+        ></NavLink>
+        <NavLink
           href="/servers/event"
+          name="Event"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Event
-        </Link>
+        ></NavLink>
       </div>
     </div>
   );

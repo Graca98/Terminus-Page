@@ -35,7 +35,7 @@ const DropdownMain = () => {
       onMouseLeave={() => setArrow(arrowDown)}
     >
       <label className="btn-nav-dropdown text-nowrap" tabIndex="0">
-        <Link href="/" className="">
+        <Link href="/" className="text-nowrap">
           Hlavní stránka
         </Link>
         {arrow}
@@ -45,28 +45,22 @@ const DropdownMain = () => {
           href="/"
           name="Informace"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Informace
-        </NavLink>
+        ></NavLink>
         <NavLink
           href="/main/pravidla"
           name="Pravidla"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Pravidla
-        </NavLink>
-        <Link
+        ></NavLink>
+        <NavLink
           href="/main/download"
+          name="Ke stažení"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Ke stažení
-        </Link>
-        <Link
+        ></NavLink>
+        <NavLink
           href="/main/kontakty"
+          name="Kontakty"
           className="dropdown-item text-sm hover:bg-gray-500"
-        >
-          Kontakty
-        </Link>
+        ></NavLink>
       </div>
     </div>
   );

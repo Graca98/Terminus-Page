@@ -10,7 +10,8 @@ const NavLink = ({ href, name, className, ...props }) => {
   return (
     <Link
       href={href}
-      className={`${isActive ? "text-red-500" : "text-white"} ${className}`}
+      className={`${isActive ? "menu-active lg:bg-termi-hover lg:rounded-md" : ""} ${className}`}
+      aria-current={isActive ? "page" : undefined}
       {...props}
     >
       {name}
