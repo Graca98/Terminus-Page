@@ -154,7 +154,7 @@ const Informace = () => {
 
       {/* FAQ */}
       <section>
-        <div className="accordion-group accordion-group-bordered mt-12 mb-24">
+        <div className="accordion-group accordion-group-bordered mt-12 mb-24  hidden">
           <div className="accordion">
             <input type="checkbox" id="faq" className="accordion-toggle" />
             <label htmlFor="faq" className="accordion-title bg-inherit">
