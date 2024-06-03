@@ -1,0 +1,76 @@
+{
+  "vedeni": [
+    {
+      "name": "Davisiiiik",
+      "role": "Správce",
+      "desc": "Majitel, správce všech serverů, systémů a databází",
+      "discord": "Davisiiiik"
+    },
+    {
+      "name": "Gracous",
+      "role": "Správce",
+      "desc": "Web developer, správce pluginů, slimefun expert",
+      "discord": "Gracous"
+    },
+    {
+      "name": "Texmyn",
+      "role": "Hl. Admin",
+      "desc": "Správa admin-teamu",
+      "discord": "TerrorByTexi"
+    },
+    {
+      "name": "matobodo",
+      "role": "Developer",
+      "desc": "Developer, správce VDS a systému Pterodactyl",
+      "discord": "matobodo"
+    }
+  ],
+  "skyblockTeam": [
+    {
+      "name": "1Azazel1",
+      "role": "Admin",
+      "desc": "",
+      "discord": "dokopazazel"
+    },
+    { "name": "Kat02", "role": "Admin", "desc": "", "discord": ".kat02" },
+    {
+      "name": "nazdarekparek",
+      "role": "Mod",
+      "desc": "Hlavní vítač nováčků",
+      "discord": "nazdarekparek"
+    },
+    {
+      "name": "Jahodak1631",
+      "role": "SFHelper",
+      "desc": "Slimefun expert",
+      "discord": "jahodak1631"
+    },
+    {
+      "name": "Pumpk1n_",
+      "role": "Helper",
+      "desc": "",
+      "discord": "pumpkin_6087"
+    },
+    { "name": "matofuj", "role": "Trial", "desc": "", "discord": "Shuter" }
+  ],
+  "eventTeam": [
+    {
+      "name": "AlmostPanda",
+      "role": "Hl. Eventer",
+      "desc": "Správce event serveru, expert na mise",
+      "discord": "Pandicka"
+    },
+    {
+      "name": "Nimue__",
+      "role": "EventMaster",
+      "desc": "",
+      "discord": "chica2713"
+    },
+    {
+      "name": "Jelkaki",
+      "role": "EventMaster",
+      "desc": "",
+      "discord": "jelkaki"
+    }
+  ]
+}
