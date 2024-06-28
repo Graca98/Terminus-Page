@@ -32,7 +32,7 @@ export default function Skyblock() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="overflow-hidden">
             <Image
-              src="/img/servers/SkyBlock1.jpg"
+              src="https://graca98.github.io/Terminus-Page/img/servers/SkyBlock1.jpg"
               className="img-hover rounded-lg"
               alt="SkyBlock Spawn"
               width={1000}
