@@ -28,7 +28,7 @@ export default function JakSePripojit() {
           <h2 className="text-2xl font-bold">Jak se připojit a hrát</h2>
           <p className="mb-0">Jednoduše spusťte Minecraft a v hlavním menu zvolte tlačítko &quot;Multiplayer&quot;. Následně dle obrázku zvolte &quot;Add Server&quot;.</p>
           <div className="mt-2 mb-8 overflow-hidden">
-            <Image className="img-hover" src="/img/servers/connect0.jpg" width={450} height={140} alt="Připojení" />
+            <Image className="img-hover" src="/Terminus-Page/img/servers/connect0.jpg" width={450} height={140} alt="Připojení" />
           </div>
           <p className="mb-0">
             Do kolonky Server Name můžete napsat cokoliv dle vlastní volby. Do kolonky Server Address vložte IP adresu serveru.
@@ -38,7 +38,7 @@ export default function JakSePripojit() {
             SkyBlock: play.tcraft.eu
           </p>
           <div className="mt-2 mb-8 overflow-hidden">
-            <Image className="img-hover" width={450} height={180} src="/img/servers/connect1.png" alt="Připojení" />
+            <Image className="img-hover" width={450} height={180} src="/Terminus-Page/img/servers/connect1.png" alt="Připojení" />
           </div>
           <p className="mb-0">
             Nyní stačí kliknout na tlačítko &quot;Done&quot; a je hotovo! Můžete se připojit na náš server a do naší skvělé komunity. Uvidíme se tam!
