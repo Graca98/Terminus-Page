@@ -42,7 +42,7 @@ export default function Skyblock() {
 
           <div className="overflow-hidden">
             <Image
-              src="/img/servers/Skyblock2.jpg"
+              src="/Terminus-Page/img/servers/Skyblock2.jpg"
               className="img-hover rounded-lg hover:rounded-lg"
               alt="SkyBlock Spawn"
               width={1000}
