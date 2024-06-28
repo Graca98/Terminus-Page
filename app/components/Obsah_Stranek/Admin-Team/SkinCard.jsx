@@ -4,8 +4,8 @@ import Skin from "@/components/Obsah_Stranek/Admin-Team/Skin";
 import DiscordIcon from "@/components/Icons/DiscordIcon";
 
 export default function SkinCard({
-  name = "",
-  role = "",
+  name = "Není vyplněno",
+  role = "Není vyplněno",
   desc = "",
   discord = "",
 }) {
@@ -29,7 +29,7 @@ export default function SkinCard({
             <p className="text-lg font-medium pb-1">{role}</p>
             <p className="">{validateDesc}</p>
           </div>
-          <div className="card-footer text-gray-500 col-span-1 md:col-span-2 gap-1">
+          <div className="card-footer text-gray-600 col-span-1 md:col-span-2 gap-1">
             {discord.length > 0 ? <DiscordIcon /> : null}
             {discord}
           </div>

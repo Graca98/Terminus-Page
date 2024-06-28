@@ -19,15 +19,15 @@ const Pricing = () => {
     setPrice(
       checked
         ? {
-            vip: `${text.czVip} Kč`,
-            evip: `${text.czEvip} Kč`,
-            donator: `${text.czDonator} Kč`,
-          }
+          vip: `${text.czVip} Kč`,
+          evip: `${text.czEvip} Kč`,
+          donator: `${text.czDonator} Kč`,
+        }
         : {
-            vip: `${text.euroVip} €`,
-            evip: `${text.euroEvip} €`,
-            donator: `${text.euroDonator} €`,
-          },
+          vip: `${text.euroVip} €`,
+          evip: `${text.euroEvip} €`,
+          donator: `${text.euroDonator} €`,
+        },
     );
     setChecked(!checked);
     // setChecked(false)dddddddddddd
@@ -423,7 +423,7 @@ const Pricing = () => {
       </section>
 
       {/* Přepínání mezi tabem a odstavcema */}
-      <section>
+      <section className="hidden">
         {/* Vyhody v tabulce */}
         <div className="">
           <PricingTab
@@ -439,7 +439,7 @@ const Pricing = () => {
         </div>
       </section>
 
-      <section className="container-default mb-8 lg:mb-20 pt-8">
+      <section className="container-default mb-8 lg:mb-20 pt-8 hidden">
         <div className="text-gray-900 bg-white rounded-lg border-2 border-purple-700 shadow p-6 xl:p-8">
           <div id="vip">
             <h2 className="text-lg font-bold underline">VIP Výhody</h2>

@@ -50,7 +50,7 @@ const DropdownServers = () => {
           name="Skyblock"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
-        <NavLink
+        {/* <NavLink
           href="/servers/survival"
           name="Survival"
           className="dropdown-item text-sm hover:bg-gray-500"
@@ -59,7 +59,7 @@ const DropdownServers = () => {
           href="/servers/event"
           name="Event"
           className="dropdown-item text-sm hover:bg-gray-500"
-        ></NavLink>
+        ></NavLink> */}
       </div>
     </div>
   );
