@@ -17,14 +17,6 @@ export default function Kontakty() {
               <LinkHover text="Facebook" mx="mx-0"></LinkHover>
             </a>
           </p>
-          <p>
-            Email:{" "}
-            <CopyButton
-              text="Davisiiiik@tcraft.eu"
-              handleClick=""
-              style="active:text-gray-400 active:transition active:ease-out active:duration-200"
-            ></CopyButton>
-          </p>
         </article>
         <article>
           <h2 className="text-3xl font-bold mb-4 md:mb-6">Discord</h2>

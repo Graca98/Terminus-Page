@@ -30,30 +30,28 @@ export default function Skyblock() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <div>
-            <figure className="figure">
-              <img
-                src="public/img/servers/SkyBlock1.jpg"
-                className="figure-img img-fluid rounded-lg hover:shadow-lg transition-shadow duration-300"
-                alt="SkyBlock Spawn"
-              />
-            </figure>
+          <div className="overflow-hidden">
+            <Image
+              src="/img/servers/SkyBlock1.jpg"
+              className="img-hover rounded-lg"
+              alt="SkyBlock Spawn"
+              width={1000}
+              height={562}
+            />
           </div>
 
-          <div>
-            <figure className="figure">
-              <img
-                src="public/img/servers/Skyblock2.jpg"
-                className="figure-img img-fluid rounded-lg hover:shadow-lg transition-shadow duration-300"
-                alt="SkyBlock Spawn"
-              />
-              <figcaption className="figure-caption text-right">
-                Spawn by Yuniegard and Wolkerman1
-              </figcaption>
-              <figcaption className="figure-caption text-right">
-                Photo by AsmynTexi
-              </figcaption>
-            </figure>
+          <div className="overflow-hidden">
+            <Image
+              src="/img/servers/Skyblock2.jpg"
+              className="img-hover rounded-lg hover:rounded-lg"
+              alt="SkyBlock Spawn"
+              width={1000}
+              height={562}
+            />
+            <div className="flex flex-col mt-2 font-light items-end">
+              <p>Spawn by Yuniegard and Wolkerman1</p>
+              <p>Photo by AsmynTexi</p>
+            </div>
           </div>
         </div>
       </section>

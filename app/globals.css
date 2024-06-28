@@ -23,12 +23,13 @@
     @apply max-w-screen-xl w-full mx-auto px-4 pt-6 md:pt-10 lg:pt-12 flex-grow;
   }
 
-  .faq-answer, .faq-item {
+  .faq-answer,
+  .faq-item {
     @apply text-gray-700;
   }
 
   .faq-answer {
-    @apply mb-3
+    @apply mb-3;
   }
 
   .btn-nav-dropdown,
@@ -52,7 +53,6 @@
   .bg-termi-hover {
     background-color: #3f454b;
   }
-
 }
 
 :root {

@@ -46,11 +46,11 @@ const DropdownVip = () => {
           name="Skyblock"
           className="dropdown-item text-sm hover:bg-gray-500"
         ></NavLink>
-        <NavLink
+        {/* <NavLink
           href="/vip/survival"
           name="Survival"
           className="dropdown-item text-sm hover:bg-gray-500"
-        ></NavLink>
+        ></NavLink> */}
       </div>
     </div>
   );
