@@ -14,7 +14,7 @@ export default function Navbar({ content }) {
       <div className="container-default py-0">
         <Link href="/">
           <Image
-            src="/img/header.png"
+            src="/Terminus-Page/img/header.png"
             width={740}
             height={81}
             className="lg:w-1/2 lg:h-auto hidden lg:block p-4 pl-0 max-w-4xl"
@@ -61,7 +61,7 @@ export default function Navbar({ content }) {
           </div>
           <div className="navbar-end lg:hidden">
             <Image
-              src="/img/header.png"
+              src="/Terminus-Page/img/header.png"
               width={740}
               height={81}
               className="w-1/2 p-1 min-w-40"
