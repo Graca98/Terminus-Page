@@ -24,7 +24,7 @@ const Download = () => {
           <li>
             Stahněte soubor s příponou .zip a nakopírujte jej do adresáře se
             hrou do složky resourcepacks. (Defaultní cesta:
-            <span className="break-words">C:\Users\"username"\AppData\Roaming\.minecraft\resourcepacks)</span>
+            <span className="break-words">C:\Users\&quot;username&quot;\AppData\Roaming\.minecraft\resourcepacks)</span>
           </li>
           <li>Nakonec v nastavení minecraftu resourcepack aktivujete.</li>
         </ol>

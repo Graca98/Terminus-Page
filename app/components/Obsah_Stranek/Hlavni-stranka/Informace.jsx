@@ -153,7 +153,7 @@ const Informace = () => {
       </section>
 
       {/* FAQ */}
-      <section>
+      <section className="hidden">
         <div className="accordion-group accordion-group-bordered mt-12 mb-24">
           <div className="accordion">
             <input type="checkbox" id="faq" className="accordion-toggle" />

@@ -6,10 +6,12 @@ export default function JakSePripojit() {
       <section>
         <article className="mb-5">
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <img
+            <Image
               className="hover:opacity-75 float-right"
               src="https://czech-craft.eu/api/server/terminuscraft/badges/position.svg"
               alt="Server Badge"
+              width={90}
+              height={20}
             />
           </a>
           <h2 className="text-2xl font-bold">Přehled všech serverů</h2>
@@ -24,7 +26,7 @@ export default function JakSePripojit() {
 
         <article className="mb-5">
           <h2 className="text-2xl font-bold">Jak se připojit a hrát</h2>
-          <p className="mb-0">Jednoduše spusťte Minecraft a v hlavním menu zvolte tlačítko "Multiplayer". Následně dle obrázku zvolte "Add Server".</p>
+          <p className="mb-0">Jednoduše spusťte Minecraft a v hlavním menu zvolte tlačítko &quot;Multiplayer&quot;. Následně dle obrázku zvolte &quot;Add Server&quot;.</p>
           <div className="mt-2 mb-8 overflow-hidden">
             <Image className="img-hover" src="/img/servers/connect0.jpg" width={450} height={140} alt="Připojení" />
           </div>
@@ -39,7 +41,7 @@ export default function JakSePripojit() {
             <Image className="img-hover" width={450} height={180} src="/img/servers/connect1.png" alt="Připojení" />
           </div>
           <p className="mb-0">
-            Nyní stačí kliknout na tlačítko "Done" a je hotovo! Můžete se připojit na náš server a do naší skvělé komunity. Uvidíme se tam!
+            Nyní stačí kliknout na tlačítko &quot;Done&quot; a je hotovo! Můžete se připojit na náš server a do naší skvělé komunity. Uvidíme se tam!
           </p>
         </article>
       </section>
