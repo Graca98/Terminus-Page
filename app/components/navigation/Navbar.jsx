@@ -50,8 +50,8 @@ export default function Navbar({ content }) {
           </div>
 
           <div className="navbar-end hidden lg:flex">
-            <a className="navbar-item">Přihlásit</a>
-            <a className="navbar-item btn btn-success bg-green-600">
+            <a className="btn-nav">Přihlásit</a>
+            <a className="btn btn-success bg-green-600 hover:text-stone-300">
               Registrovat
             </a>
           </div>

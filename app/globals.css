@@ -34,7 +34,7 @@
 
   .btn-nav-dropdown,
   .btn-nav {
-    @apply btn btn-primary bg-termi my-2 hover:bg-inherit hover:text-stone-300;
+    @apply btn btn-primary bg-termi my-2 hover:bg-inherit text-white hover:text-stone-300;
   }
   .btn-nav-dropdown {
     @apply pl-2.5 pr-1.5;
@@ -44,14 +44,25 @@
   }
   /*todo Dodělat btn-nav-item + napojit na nav dropdowny */
   .btn-nav-item {
-    @apply dropdown-item text-sm hover:bg-gray-500;
+    @apply dropdown-item text-sm text-white hover:bg-gray-500;
+  }
+
+  /* Barva navigačního menu na telefonech */
+  .menu-item {
+    @apply text-stone-200;
+  }
+  .menu-active.menu-active {
+    @apply text-stone-200 bg-termi-hover;
+  }
+  .menu-item:hover {
+    @apply bg-termi-hover;
   }
 
   .bg-termi {
     background-color: #212529;
   }
   .bg-termi-hover {
-    background-color: #3f454b;
+    background-color: #34383d;
   }
 }
 
@@ -89,6 +100,7 @@ body {
   /* font-size: 18px; */
 
   /* height: 100vh; */
+  min-height: 100vh;
 }
 
 .myBackground {
@@ -139,6 +151,10 @@ body {
   overflow-y: auto; /* Povolení vertikálního skrolování */
   padding: 20px; /* Vnitřní okraje pro obsah */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidání stínu pro lepší vizuální oddělení */
+}
+
+.dropdown-item {
+  color: white;
 }
 
 /* @layer utilities {

@@ -67,11 +67,11 @@ export default function NavModal() {
     <>
       <button
         onClick={toggleModal}
-        className="btn bg-termi-hover w-14 h-10 p-2"
+        className="btn bg-termi-hover w-14 h-10 p-1"
         aria-expanded={isOpen}
         aria-controls="custom-modal-content"
       >
-        {isOpen ? <NavCrossIcon /> : <NavIcon />}
+        {isOpen ? <NavCrossIcon className="text-stone-200" /> : <NavIcon className="text-stone-200" />}
       </button>
       <div
         className={`custom-modal ${isOpen ? "active" : ""}`}
@@ -82,7 +82,7 @@ export default function NavModal() {
         aria-modal="true"
         id="custom-modal-content"
       >
-        <aside className="sidebar justify-start max-h-full max-w-full w-full h-full modal-contentt">
+        <aside className="sidebar justify-start max-h-full max-w-full w-full h-full modal-contentt bg-termi">
           <section className="sidebar-content h-fit min-h-[20rem] overflow-visible py-0 mb-8">
             <nav className="menu rounded-md">
               <section className="menu-section px-4 mb-24">
@@ -96,11 +96,11 @@ export default function NavModal() {
                       className="menu-toggle"
                     />
                     <label
-                      className="menu-item justify-between"
+                      className="menu-item justify-between mb-1"
                       htmlFor="menu-main"
                     >
                       <div className="flex gap-2">
-                        <span className="text-base">Hlavní Stránka</span>
+                        <span className="text-xl">Hlavní Stránka</span>
                       </div>
 
                       <span className="menu-icon">
@@ -156,11 +156,11 @@ export default function NavModal() {
                       className="menu-toggle"
                     />
                     <label
-                      className="menu-item justify-between"
+                      className="menu-item justify-between mb-1"
                       htmlFor="menu-servers"
                     >
                       <div className="flex gap-2">
-                        <span className="text-base">Servery</span>
+                        <span className="text-xl">Servery</span>
                       </div>
 
                       <span className="menu-icon">
@@ -216,11 +216,11 @@ export default function NavModal() {
                       className="menu-toggle"
                     />
                     <label
-                      className="menu-item justify-between"
+                      className="menu-item justify-between mb-1"
                       htmlFor="menu-vip"
                     >
                       <div className="flex gap-2">
-                        <span className="text-base">Výhody</span>
+                        <span className="text-xl">Výhody</span>
                       </div>
 
                       <span className="menu-icon">
